@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Serbia: Food&Beverage</title>
+        <link rel="stylesheet" href="WTSstyles.css" />
+		<script>
+function openReviewModal() {
+                var modal = document.getElementById("review-modal");
+                modal.style.display = "block";
+            }
+
+            function closeReviewModal() {
+                var modal = document.getElementById("review-modal");
+                modal.style.display = "none";
+            }
+
+            var selectedRating = 0;
+
+            // Function to highlight the selected star rating.
+            function highlightStars(rating) {
+                const stars = document.querySelectorAll('.star');
+                stars.forEach(function (star) {
+                    const starValue = parseInt(star.getAttribute('data-star'));
+                    if (starValue <= rating) {
+                        star.classList.add('selected');
+                    } else {
+                        star.classList.remove('selected');
+                    }
+                });
+            }
+
+            // Function to handle star rating selection.
+            function selectRating(rating) {
+                selectedRating = rating;
+                highlightStars(rating);
+            }
+
+            // Add event listener to the star-rating element for rating selection.
+            document.getElementById('star-rating').addEventListener('click', function (event) {
+                if (event.target.classList.contains('star')) {
+                    const rating = parseInt(event.target.getAttribute('data-star'));
+                    selectRating(rating);
+                }
+            });
+
+            document.getElementById('review-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Check if email, rating, and message are empty
+                if (!email || selectedRating === 0 || !message) {
+                    alert("Please fill in all fields: Email, Rating, and Message.");
+                } else {
+                    console.log('Email:', email);
+                    console.log('Rating:', selectedRating); // Display the selected star rating
+                    console.log('Message:', message);
+
+                    // Optionally, you can close the modal after submission
+                    closeReviewModal();
+                }
+            });
+			
+					</script>
+					</script>
+    </head>
+    <body>	
+        <div class="head">Welcome to Serbia 
+			<div class="text-overlay">
+				<p>FOOD & BEVERAGE</p>
+			  </div>
+			<img src="WTSimages/serbianfoods_04.jpg" class="headimg">
+			</div>
+          <nav>
+	    <h3>
+			<table class="center">
+				<tr>
+				  <td ><a style="text-decoration:none" href="WelocmetoSerbia.html" class="hover-underline-animation">Home</a></td>
+				  <td ><a style="text-decoration:none" href="WTSculture.html"  target="_blank" class="hover-underline-animation">Culture</a></td>
+				  <td ><a style="text-decoration:none" href="WTSLifStyle.html" target="_blank" class="hover-underline-animation">Life Style</a></td>
+				  <td ><a style="text-decoration:none" href="WTSFood&Beverage.html" target="_blank" class="hover-underline-animation">Food & Beverage</a></td>
+				  <td ><a style="text-decoration:none" href="WTSTouristPlcaes.html" target="_blank" class="hover-underline-animation">Tourist Paces</a></td>
+				  <td ><a style="text-decoration:none" href="WTSSports.html" target="_blank" class="hover-underline-animation">Sports</a></td>
+				</tr>
+			  </table>
+	    </h3>
+	  </nav>
+	</div>
+	<table border=1>
+		<tr><td>
+		<h2>Food and Drinks in Serbia</h2>
+		<p>Serbian cuisine offers an enormous range of dishes and is a well-balanced blend of eastern, central European, and regional Balkan cuisines. Apart from eating in restaurants and kafanas (a type of tavern), Serbs frequently consume fast food, particularly grilled cuisine for lunch and pastries for all other meals.<br>The majority of Serbian cuisine is fatty and high in calories. In Serbian cuisine, meat, pastries, and regional veggies predominate.</p>
+		<h3>Here are some of the most popular dishes:</h3>
+
+		<p class="food">Meats</p>
+		<aside class="foodaside">
+			<img src="WTSimages/ĆEVAPĆIĆI.png" width="150px" height="100px">
+			<p class="imgtext">Ćevapi (or ćevapčići)</p>
+		</aside>
+			<ul>
+				<li><p class="subtitle">ĆEVAPĆIĆI</p></li>
+				<p><b><i>Ćevapi (or ćevapčići)</i></b> are miniature grilled sausage-like chunks of minced meat. Serbian "evapi" are either made of beef, lamb, pig, or a combination of these.They are frequently served with chopped onions, sour cream, kajmak, ajvar, cottage cheese, minced red pepper, and salt, and are typically served in groups of 5 to 10 on a plate or on a flatbread (lepinje or somun).</p>
+			</ul>
+			<br>
+			<ul>
+				<br>
+				<aside class="PLJESKAVICA">
+					<img src="WTSimages/PLJESKAVICA.JPG">
+					<p class="imgtext">Pljeskavica</p>
+				</aside>
+				<li><p class="subtitle">PLJESKAVICA</p></li>
+				<p><b><i>Pljeskavica</i></b> is a popular patty dish, second only to ćevapćići.It is frequently served with urnebes mixed spicy sauce, ajvar sauce of peppers, and kajmak milk cream.</p>
+				<p>
+					One of Serbia's most well-known dishes is Leskovaka pljeskavica, which is often prepared of beef or pork, is quite spicy, and is eaten with onions. However, there are a variety of various methods to serve it, including arska and Hajduka. Arska pleskavica is packed with kashkaval cheese and made with meat. The meat for Hajduka pljeskavica is a mixture of beef and smoked pork.</p>
+				<p>Pljeskavica has recently become more well-known in Europe and is now available in a select number of fast food outlets in countries like Germany, Sweden, and Austria.</p>
+			</ul>
+			<ul>
+				<br>
+				<aside class="BEČKA">
+					<img src="WTSimages/BEČKA ŠNICLA (VIENNESE SCHNITZEL).jpg">
+					<p class="imgtext">BEČKA ŠNICLA (VIENNESE SCHNITZEL)</p>
+				</aside>
+				<li><p class="subtitle">BEČKA ŠNICLA (VIENNESE SCHNITZEL)</p></li>
+				<p><b><i>BEČKA ŠNICLA</i></b>, a typical Austrian meal, is created with boneless beef that has been thinned with a hammer (prepared like an escalope), then breaded and fried.Although there are variations everywhere in the world, it is a well-known component of German and Austrian cuisine.</p> <p>In Austria, a lemon slice and either potato salad or potatoes with parsley and butter are typically used to garnish the dish known as Wiener Schnitzel (Viennese schnitzel).The dish is known as beka nicla (Viennese schnitzel) in Serbia. Nobody knows why the meal originated in Serbia rather than Italy, according to a local urban legend.
+					</p>
+					<p>Peenje occasionally has a lot of grease, especially when it's served cold, which happens frequently.</p>
+			</ul>
+
+			<p class="food">Soups, stews and other “spoon” dishes</p>
+
+			<ul>
+				<aside class="SARMA">
+					<img src="WTSimages/SARMA.jpg">
+					<p class="imgtext">SARMA</p>
+				</aside>
+				<li><p class="subtitle">SARMA</p></li>
+				<p>Sarma is essentially ground meat and rice wrapped with grapevine, cabbage, or other greens. The cabbage sarma is the most well-liked dish in Serbia. While some enjoy it with pavlaka (sour cream), others prefer it with garlic.
+				</p>
+			</ul><br><br>
+			<ul>
+				<li><p class="subtitle">FISH PAPRIKAŠ</p></li>
+				<p>Try the classic Riblja orba or Riblji paprika (fish stew with tomato juice and paprika) if you're in a seafood restaurant by the river. This meal appeals to even those who don't particularly like fish.</p>
+			</ul>
+			<br><br>
+			<ul>
+				<aside class="UNJENE">
+					<img src="WTSimages/PUNJENE PAPRIKE.jpg">
+					<p class="imgtext">UNJENE PAPRIKE</p>
+				</aside>
+				<li><p class="subtitle">PUNJENE PAPRIKE</p></li>
+				<p><b><i></i>Punjene paprike (stuffed paprikas)</i></b> is a meal created from paprika that has been filled with a mixture of rice and meat in a tomato sauce. The components include green or red bell peppers, eggs, spices, salt, tomato, rice, and minced beef.
+				</p>
+			</ul><br><br>
+			<ul>
+				<li><p class="subtitle">ŠKEMBIĆI</p></li>
+				<p><b><i>Škembići (Tripe soup)</i></b> comes in a wide range of variations in Eastern European food. One of the earliest known foods in Serbia is kembii, which dates back to the 13th century. Kembii, which is served with boiling potatoes, is tripe in a vegetable stew with herbs.</p>
+			</ul>
+			<p class="food">Pastry</p>
+
+			<ul>
+				<aside class="BUREK">
+					<img src="WTSimages/burek.jpg">
+					<p class="imgtext">BUREK</p>
+				</aside>
+				<li><p class="subtitle">GIBANICA</p></li>
+				<p><b><i>Gibanica</i></b> is a traditional cheese pie from Serbia. It is formed of layers of thin dough with cheese and typically has an egg poured over it. It is one of the most recognizable forms of Serbian pastries.
+				</p>
+			</ul><br><br>
+			<ul>
+				<li><p class="subtitle">BUREK</p></li>
+				<p><b><i>Burek</i></b> is a group of Ottoman-style baked or fried filled pastries produced from the thin, flaky dough known as yufka (or phyllo). It can have cheese, minced beef, or mushrooms as its filling. There are also some contemporary variants that are cherry-filled instead of having any fill.
+				</p>
+			</ul><br>
+			<ul>
+				<li><p class="subtitle">PROJA</p></li>
+				<p><b><i>Proja</i></b> is a cornbread-based dish popular in Serbia. It was once popular during periods of extreme poverty, primarily before to the 1950s, but is now a typical regular dinner. It is frequently confused with projara, a fancier version of proja.</p>
+			</ul>
+
+			<p class="food">Salad and Appetizers</p>
+			<ul>
+				<aside class="AJVAR">
+					<img src="WTSimages/AJVAR.jpg">
+					<p class="imgtext">AJVAR</p>
+				</aside>
+				<li><p class="subtitle">ŠOPSKA/SRPSKA SALAD</p></li>
+				<p>The only difference between these two types of salad is the addition of cheese or cucumber. Asking the waiter what it has would be better because there are various interpretations. It consists primarily of tomato, onion, paprika, cucumber, and hard white cheese.</p>
+			</ul><br><br>
+			<ul>
+				<li><p class="subtitle">AJVAR</p></li>
+				<p><b><i>Ajvar</i></b> can be eaten as a salad, a side dish, or a bread spread. Red bell peppers make up the majority of it, along with eggplant, garlic, and chili pepper.</p>
+				<p>Ajvar, which is originally from Serbia, was for a long time known as "Serbian salad" or "Serbian vegetable caviar". After World War II, it gained popularity as a salad (side dish) throughout Yugoslavia, and it is still popular in the Balkans today.</p>
+				<p>While some commercial makers use cooked peppers, which results in a lower-quality product, authentic homemade ajvar is prepared from roasted peppers. It can be sweet, piquant (the most typical), or very fiery depending on the number of chili peppers added and the amount of capsaicin in the bell peppers.</p>
+			</ul><br>
+			<ul>
+				<aside class="URNEBES">
+					<img src="WTSimages/URNEBES.jpg">
+					<p class="imgtext">URNEBES</p>
+				</aside>
+				<li><p class="subtitle">URNEBES</p></li>
+				<p><b><i>Urnebes (translation: chaos, disorder)</i></b>is a style of salad popular in the city of Ni and southern Serbia that is typical of Serbian cuisine. With salt and other seasonings, it is made of cheese and fiery chili peppers.
+					It is made using chopped peppers in Southern Serbia, which is probably where it originated, while other places use ground dry peppers (aleva), which give food a red hue. Urnebes range in heat from mild to highly hot depending on the type and quantity of peppers used.<br></p><p>
+					It is typically served with barbecue as a side dish. Garlic is occasionally used.
+					</p>
+			</ul>
+			<ul>
+				<li><p class="subtitle">KAJMAK</p></li>
+				<p>A creamy dairy delicacy called <b><i>aмак</i></b>, which is frequently served with flatbreads such evapii, pljeskavica, and prenice, is comparable to clotted cream.
+				</p>
+			</ul><br><br>
+
+			<p class="food">Popular Serbian drinks:</p>
+				<ul>
+					<aside class="RAKIJA">
+						<img src="WTSimages/rakija_sljivovica_251215_tw1024.jpg">
+						<p class="imgtext">Plum Rakija (Šljivovica) </p>
+					</aside>
+					<li><p class="subtitle">RAKIJA</p></li>
+					<p><b><i>Rakija</i></b> a potent brandy made primarily from plums (ljivovica), apricots (kajsijevaa), quinces (dunjevaa), and pears (vilijamovkaa), is the most popular beverage in Serbia. Additional versions include cherry, therapeutic herbs (Stomaklija), and honey (Medovaa). Typically, the alcohol concentration ranges from 30% to 40%, however some private distillers reach up to 50%.
+					</p>
+				</ul><br><br>
+				<ul>
+					<li><p class="subtitle">PELINKOVAC</p></li>
+					<p>Wormwood (pelin) is the base of the bitter liqueur known as <b><i>pelinkovac</i></b>. The volume alcohol concentration ranges from 28% to 35%. It tastes extremely harsh and is comparable to Jägermeister.
+					</p>
+				</ul><br><br>
+				<ul>
+					<aside class="PELINKOVAC">
+						<img src="WTSimages/PELINKOVAC.jpg">
+						<p class="imgtext">PELINKOVAC</p>
+					</aside>
+				<li><p class="subtitle">SERBIAN BEER & WINE</p></li>
+				<p>Numerous breweries in Serbia produce a wide variety of domestic and foreign alcoholic beverages, including well-liked selections like Jelen (Deer) and Lav (Lion). Furthermore, Serbia is home to five significant wine areas, including Fruka Gora, Vrac, Oplenac, Smederevo, and Upa, which are renowned for their outstanding Bermet, Riesling, Merlot, Pinot, Chardonnay, and Cabernet Sauvignon wines.
+				</p>
+			</ul><br><br>
+
+
+	</td></tr>
+	</table>
+	
+	<a href="javascript:void(0);" class="floating-review-link" onclick="openReviewModal()">We'd love to hear your thoughts!<br>RATE US!</a>
+
+	<div id="review-modal" class="modal">
+		<div class="modal-content">
+		  <span class="close" onclick="closeReviewModal()">&times;</span>
+		  <h2>RATE US!</h2>
+
+		  <form id="review-form">
+			<label class="label">Email:</label>
+			<input type="email" id="email" placeholder="Email" required class="box">
+			<br><br>
+			<label class="label">Rate Us:</label>
+			<div class="star-rating">
+				<input type="radio" id="star5" name="rating" value="5" required>
+				<label for="star5">★</label>
+				<input type="radio" id="star4" name="rating" value="4" required>
+				<label for="star4">★</label>
+				<input type="radio" id="star3" name="rating" value="3" required>
+				<label for="star3">★</label>
+				<input type="radio" id="star2" name="rating" value="2" required>
+				<label for="star2">★</label>
+				<input type="radio" id="star1" name="rating" value="1" required>
+				<label for="star1">★</label>
+			</div>
+			<br><br>
+			<label class="label">Enter Your Review:</label>
+			<textarea id="message" placeholder="Message" required></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		  
+		  
+		  
+		  
+		</div>
+	  </div>
+  </div>
+  <div class="end">
+	<aside class="End-left">
+		<!--<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqTfQDnSdzDcfdhbmBShChFFHzlVkGFDKSBChdXJLSBVXdHmqTkFcNxgndpSHmBFsWNbTL">Email me for inquiry.</a>-->
+	  <p>Created by: Pretzil Joy S. Vivares</p>
+	  <p>Course & Year: BSCS-3</p>
+	</aside>
+  
+	<aside class="End-right">
+	  <p>This project is for PC-WDD final project!</p>
+	  <p>Professor: Meridel Ejusa</p>
+	</aside>
+  </div>
+
+    </body>
+</html>

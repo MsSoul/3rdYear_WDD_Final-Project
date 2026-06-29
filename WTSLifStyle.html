@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Serbia: LifeStyle</title>
+        <link rel="stylesheet" href="WTSstyles.css" />
+
+
+		<script>
+function openReviewModal() {
+                var modal = document.getElementById("review-modal");
+                modal.style.display = "block";
+            }
+
+            function closeReviewModal() {
+                var modal = document.getElementById("review-modal");
+                modal.style.display = "none";
+            }
+
+            var selectedRating = 0;
+
+            // Function to highlight the selected star rating.
+            function highlightStars(rating) {
+                const stars = document.querySelectorAll('.star');
+                stars.forEach(function (star) {
+                    const starValue = parseInt(star.getAttribute('data-star'));
+                    if (starValue <= rating) {
+                        star.classList.add('selected');
+                    } else {
+                        star.classList.remove('selected');
+                    }
+                });
+            }
+
+            // Function to handle star rating selection.
+            function selectRating(rating) {
+                selectedRating = rating;
+                highlightStars(rating);
+            }
+
+            // Add event listener to the star-rating element for rating selection.
+            document.getElementById('star-rating').addEventListener('click', function (event) {
+                if (event.target.classList.contains('star')) {
+                    const rating = parseInt(event.target.getAttribute('data-star'));
+                    selectRating(rating);
+                }
+            });
+
+            document.getElementById('review-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Check if email, rating, and message are empty
+                if (!email || selectedRating === 0 || !message) {
+                    alert("Please fill in all fields: Email, Rating, and Message.");
+                } else {
+                    console.log('Email:', email);
+                    console.log('Rating:', selectedRating); // Display the selected star rating
+                    console.log('Message:', message);
+
+                    // Optionally, you can close the modal after submission
+                    closeReviewModal();
+                }
+            });
+			
+					</script>
+</script>
+
+		  
+		  
+		  
+		  
+    </head>
+    <body>	
+        <div class="head">Welcome to Serbia 
+			<div class="text-overlay">
+				<p>LIFE STYLE</p>
+			  </div>
+			<img src="WTSimages/SERBIANLIFESTYLE.jpg" class="headimg">
+			</div>
+          <nav>
+	    <h3>
+			<table class="center">
+				<tr>
+				  <td ><a style="text-decoration:none" href="WelocmetoSerbia.html" class="hover-underline-animation">Home</a></td>
+				  <td ><a style="text-decoration:none" href="WTSculture.html"  target="_blank" class="hover-underline-animation">Culture</a></td>
+				  <td ><a style="text-decoration:none" href="WTSLifStyle.html" target="_blank" class="hover-underline-animation">Life Style</a></td>
+				  <td ><a style="text-decoration:none" href="WTSFood&Beverage.html" target="_blank" class="hover-underline-animation">Food & Beverage</a></td>
+				  <td ><a style="text-decoration:none" href="WTSTouristPlcaes.html" target="_blank" class="hover-underline-animation">Tourist Paces</a></td>
+				  <td ><a style="text-decoration:none" href="WTSSports.html" target="_blank" class="hover-underline-animation">Sports</a></td>
+				</tr>
+			  </table>
+	    </h3>
+	  </nav>
+	</div>
+	<table border=1>
+		<tr><td>
+			<h2>The Life Style</h2>
+				<p>There is something wonderful about Serbians, not to start with the glaringly apparent. Why are they that way? The quirks of these fantastic people may very well be what makes them so awesome, and the culture is as irritating as it is seductive.These are the fundamental principles of that society. Everyone in the world is capable of appreciating their closest friends and family, but the people who live here take this concept far more seriously. For the locals, this relationship is everything, and they aren't afraid to say as much.</p>
+				<p>The Serbs are kind and open to visitors despite years of hostility with their neighbors, so long as they don't photograph recent bomb debris and steer clear of the contentious Kosovo issue.During the four centuries of Ottoman domination, Serbian people were forbidden from owning property, playing musical instruments, or even learning to read and write, but they have more than made up for those missed opportunities. The one-stringed gusle, the most distinctive musical instrument in Serbia, was created to circumvent the stringent Ottoman regulations on music production.</p>
+				<p>Many of the most well-known pop bands in the nation now include traditional Serbian sounds in their music. Serbia currently has more than thirty art galleries, 140 museums, and a distinctive black humor that has helped the populace survive the country's numerous historical ups and downs.Serbia's most prevalent religion is Orthodox Christianity, and each Orthodox family sets aside one particular day to honor its own patron saint. Before taking a drink, participants in traditional Serbian toasts are expected to look each other in the eye and say, "Ziveli".</p>
+
+			<h3>Etiquette:</h3>
+			<p class="subtitle"><i>Basic Etiquette</i></p>
+			<ul class="list">
+
+				<li>Serbia has a vibrant coffee culture. Throughout the day, black coffee, or "crnakafa," is regularly provided.</li><br>
+				<li>The majority of Serbians are highly hospitable and frequently love receiving visitors and engaging in conversation</li><br>
+				<li>Most people dress well. Overly casual clothing may not be appropriate to wear in public.</li>
+
+			</ul>
+			<p class="subtitle"><i>Visiting</i></p>
+			<ul class="list">
+				<li>Serbians enjoy visiting one another and spending time with their loved ones.</li><br>
+				<li>Birthdays and other significant events are frequently scheduled. On the other hand, unexpected visits to friends and family are frequently welcomed.</li><br>
+				<li>Being invited to a family's slava (a celebration of a family's patron saint) is regarded as an honor. If you are invited, bring a symbolic present, such a bottle of wine, and say "Srecna slava" to everyone.</li><br>
+				<li>It is customary to behave nicely and keep one's voice down when visiting a church. When entering, caps should be taken off and shoulders should be covered.</li>
+			</ul>
+			<p class="subtitle"><i>Eating</i></p>
+			<ul class="list">
+				<li>The majority of individuals eat breakfast, lunch, and dinner every day. Lunch, which is often eaten in the afternoon, is the main meal of the day.</li><br>
+				<li>Soup, a main course, and a dessert are common courses served during dinner.</li><br>
+				<li>Most people don't wait to be provided more food; instead, they assume that others will receive it when they request it.</li><br>
+				<li>You're done eating when you put your fork and knife together and leave them on the dish.</li><br>
+				<li>When dining out, the host is expected to make the payment. Offer to help, but don't suggest splitting the cost. You might show your appreciation by proposing to take your host out to dinner at a later time.</li><br>
+				<li>It's customary for people to toast when drinking. They will lift their glasses, exclaim "iveli," and toast everyone while gazing into their eyes. </li><br>
+				<li>Serbia's national beverage is rakija. Many hosts would provide their male guests with rakija, which is frequently homemade. </li><br>
+				<li>If you don't want any more booze, leave your glass half-full. </li>
+			</ul>
+			<p class="subtitle"><i>Gift Giving</i></p>
+			<ul class="list">
+				<li>Refusing to accept a gift is seen as impolite.</li><br>
+				<li>Gifts are typically unwrapped right away.</li><br>
+				<li>Bottles of wine and bouquets of flowers are typical presents.</li>
+			</ul>	
+		</td></tr>
+	</table>
+	<a href="javascript:void(0);" class="floating-review-link" onclick="openReviewModal()">We'd love to hear your thoughts!<br>RATE US!</a>
+
+	<div id="review-modal" class="modal">
+		<div class="modal-content">
+		  <span class="close" onclick="closeReviewModal()">&times;</span>
+		  <h2>RATE US!</h2>
+
+		  <form id="review-form">
+			<label class="label">Email:</label>
+			<input type="email" id="email" placeholder="Email" required class="box">
+			<br><br>
+			<label class="label">Rate Us:</label>
+			<div class="star-rating">
+				<input type="radio" id="star5" name="rating" value="5" required>
+				<label for="star5">★</label>
+				<input type="radio" id="star4" name="rating" value="4" required>
+				<label for="star4">★</label>
+				<input type="radio" id="star3" name="rating" value="3" required>
+				<label for="star3">★</label>
+				<input type="radio" id="star2" name="rating" value="2" required>
+				<label for="star2">★</label>
+				<input type="radio" id="star1" name="rating" value="1" required>
+				<label for="star1">★</label>
+			</div>
+			<br><br>
+			<label class="label">Enter Your Review:</label>
+			<textarea id="message" placeholder="Message" required></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		  
+		  
+		  
+		  
+		</div>
+	  </div>
+  </div>
+  <div class="end">
+	<aside class="End-left">
+		<!--<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqTfQDnSdzDcfdhbmBShChFFHzlVkGFDKSBChdXJLSBVXdHmqTkFcNxgndpSHmBFsWNbTL">Email me for inquiry.</a>-->
+	  <p>Created by: Pretzil Joy S. Vivares</p>
+	  <p>Course & Year: BSCS-3</p>
+	</aside>
+  
+	<aside class="End-right">
+	  <p>This project is for PC-WDD final project!</p>
+	  <p>Professor: Meridel Ejusa</p>
+	</aside>
+  </div>
+
+    </body>
+</html>

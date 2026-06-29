@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Serbia</title>
+        <link rel="stylesheet" href="WTSstyles.css" />
+		<script>
+function openReviewModal() {
+    var modal = document.getElementById("review-modal");
+    modal.style.display = "block";
+    // Hide the success message if it was previously displayed
+    document.getElementById('success-message').style.display = 'none';
+}
+
+function closeReviewModal() {
+    var modal = document.getElementById("review-modal");
+    modal.style.display = "none";
+}
+
+var selectedRating = 0;
+
+// Function to highlight the selected star rating.
+function highlightStars(rating) {
+    const stars = document.querySelectorAll('.star-rating input[type="radio"]');
+    stars.forEach(function (star) {
+        const starValue = parseInt(star.value);
+        if (starValue <= rating) {
+            star.parentElement.classList.add('selected');
+        } else {
+            star.parentElement.classList.remove('selected');
+        }
+    });
+}
+
+// Function to handle star rating selection.
+function selectRating(rating) {
+    selectedRating = rating;
+    highlightStars(rating);
+}
+
+document.getElementById('review-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Check if email, rating, and message are empty
+    if (!email || selectedRating === 0 || !message) {
+        alert("Please fill in all fields: Email, Rating, and Message.");
+    } else {
+        // Display the success message
+        document.getElementById('success-message').style.display = 'block';
+
+        // Optionally, you can close the modal after submission
+        // closeReviewModal();
+    }
+});
+			
+			
+
+		</script>
+    </head>
+    <body>	
+        <div class="head">Welcome to Serbia 
+			<div class="text-overlay">
+				<p>HOME</p>
+			  </div>
+	<img src="WTSimages\bg4.png" class="headimg">
+
+	</div>
+	<div>
+          <nav>
+	    <h3>
+		<table class="center">
+		  <tr>
+			<td ><a style="text-decoration:none" href="WelocmetoSerbia.html" class="hover-underline-animation">Home</a>
+</td>
+			<td ><a style="text-decoration:none" href="WTSculture.html"  target="_blank" class="hover-underline-animation">Culture</a></td>
+			<td ><a style="text-decoration:none" href="WTSLifStyle.html" target="_blank" class="hover-underline-animation">Life Style</a></td>
+			<td ><a style="text-decoration:none" href="WTSFood&Beverage.html" target="_blank" class="hover-underline-animation">Food & Beverage</a></td>
+			<td ><a style="text-decoration:none" href="WTSTouristPlcaes.html" target="_blank" class="hover-underline-animation">Tourist Paces</a></td>
+			<td ><a style="text-decoration:none" href="WTSSports.html" target="_blank" class="hover-underline-animation">Sports</a></td>
+		  </tr>
+		</table>
+	    </h3>
+	  </nav>
+	</div>
+	<div>
+	   <table border=1>
+		<tr>
+			<td>
+			<div>
+			<h2>About</h2>
+			<aside class="flag">
+				<img src="WTSimages\flag.png" width="300px" height="200px">
+				<p id="image-title"> Flag of Serbia</p>
+			</aside>
+			</p>
+				<p><b>Serbia</b> (/ˈsɜːrbiə/) SUR-bee-ə; Serbian Cyrillic: Србија, romanized: Srbija, pronounced [sř̩bija].<br></p>
+				<p>Is a landlocked nation located at the meeting point of the Pannonian Basin and the Balkans in Southeast and Central Europe. Its land boundaries include those with Hungary to the north, Romania to the northeast, Bulgaria to the southeast, North Macedonia to the south, Croatia and Bosnia and Herzegovina to the west, Montenegro to the southwest, and it also claims a border with Albania through the disputed territory of Kosovo. There are 6.6 million people living in Serbia. The largest city is <b>Belgrade</b>, the country's capital.</p>
+				<p>The region of modern-day Serbia, which has been continuously populated since the Paleolithic Age, was subject to Slavic migrations in the 6th century, leading to the establishment of many regional entities in the early Middle Ages that were occasionally acknowledged as tributaries to the Byzantine, Frankish, and Hungarian kingdoms. In 1217, the Holy See and Constantinople recognized the Serbian Kingdom, which later became the Serbian Empire in 1346. By the middle of the 16th century, the Ottomans had completely absorbed what is now Serbia. The Habsburg Empire, which started advancing into Central Serbia at the end of the 17th century while still having a presence in Vojvodina, occasionally interfered with the Ottomans' power. The Serbian Revolution created the nation-state as the first constitutional monarchy in the area at the beginning of the 19th century, which led to the nation-state's subsequent territorial expansion.
+				 </p>
+				<p>The Kingdom of Serbia joined forces with the former Habsburg crown land of Vojvodina in 1918, following the conclusion of World War I. Later that year, it joined forces with other South Slavic countries to form Yugoslavia, which endured in various political configurations until the Yugoslav Wars of the 1990s. Serbia joined forces with Montenegro during the dissolution of Yugoslavia; this union, which peacefully ended in 2006, allowed Serbia to regain its independence as a sovereign state for the first time since 1918. In 2008, the Assembly of Kosovo unilaterally declared independence, prompting conflicting reactions from the international community while Serbia continues to assert that it is a part of its own sovereign territory.
+				 </p>
+				<p>The Human Development Index classifies Serbia as having a "very high" ranking and an upper-middle income economy. It is a member of the UN, CoE, OSCE, PfP, BSEC, CEFTA, and is applying to join the WTO. It is also a unitary parliamentary constitutional republic. With the goal of joining the EU by 2030, the nation has been in accession talks with the EU since 2014. Serbia nominally upholds the policy of military neutrality. The nation offers its residents free elementary and secondary education as well as universal health care.
+				 </p>
+			</div>
+			<br><br>
+			<div>
+				<p class="subtitle">Geopgraphy:</p>
+				<aside class="map">
+				    <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=belgrade,&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 470px; height: 310px;"></iframe><style>.mapouter{position:relative;height:310px;width:470px}.gmap_canvas{overflow:hidden;height:310px;width:470px}.gmap_canvas iframe{position:relative;z-index:2}.gmap_canvas a{top:0;z-index:0}</style><a href="https://www.eireportingonline.com">ei reporting online</a></div></div>
+				    <p id="image-title">Serbia</p>
+				</aside>
+			   <p class="indent">At the intersection of middle and Southeast Europe, <b>Serbia</b> is a compact nation that encompasses the middle Balkans and the extreme southern reaches of the Pannonian Plain. Its neighbors are North Macedonia, Montenegro, Romania, Kosovo, Bulgaria, Croatia, Hungary, Bosnia-Herzegovina, and North Macedonia. Serbia is a landlocked country, although it can reach the Adriatic Sea through Montenegro, and it can also reach the Black Sea and inland Europe via the Danube.
+			     </p>
+				 <p class="subtitle">Area and borders:</p>
+			   <p >Serbia is the 111th-largest country in the world by area, with a total area of 88,361 km2 (34,116 sq mi). Serbia's total area is made up of forests on 19,499 km2 (7,529 sq mi) and arable land on 19,194 km2 (7,411 sq mi) (24.8%).Serbia's total border length is 2,361 km (1,467 mi), which includes its borders with Bosnia and Herzegovina, Bulgaria, Croatia, Hungary, North Macedonia, Montenegro, Romania, and Albania. The length of Serbia's borders with these countries is as follows: 249.5 km (155.0 km), 282.9 km (175.8 km), and 546.5 km (339.6 km). 
+			    
+				<ul><b>Extreme points:</b>
+					<li>North: 46°11'25" N (near Hajdukovo)</li>
+					<li>South: 41°51'08" N (near Rastelica)</li>
+					<li>East: 23°00'47" E (Senokos near Dimitrovgrad)</li>
+					<li>West: 18°49'16" E (near Bezdan in Vojvodina)</li>
+				</ul></p>
+			  <br><br>
+			  <p class="subtitle">Topography:</p>
+			<aside class="topography">
+				     <img src="WTSimages\topography.png" width=" 200px" height="400px" >
+				<p id="image-title"> Topography of Serbia</p>
+			</aside>	 
+			   <p>The geography of Serbia is varied, with rich plains in the northern Vojvodina region, limestone ranges and basins in the east, and historic mountains and hills in the southeast. The Danube River dominates the north. The more hilly southern areas of Serbia are traversed by the Morava River, a tributary of the Danube.
+				</p>
+			   <p>The majority of the central Serbian landscape is made up of low to medium ranges and hills, with numerous rivers and creeks dotted throughout. Southeast of Belgrade, in the valley created by the Great and South Morava rivers, is where the primary communication and development line runs, heading towards Ni and Skopje (in North Macedonia). The majority of big cities, along with the main highway and railroad, are situated on or close to this line. The terrain climbs to the limestone ranges of Stara Planina and the Serbian Carpathians to the east of this line in a region that is only moderately populated. Mountains steadily climb to the southwest in the west, but they don't actually create ridges. These region's tallest mountains are Zlatibor and Kopaonik.
+				</p>
+			   <p>The majority of the country is covered by mountains. Four mountain systems converge in Serbia, with the Dinaric Alps in the west spanning the largest area from the northwest to the southeast. East of the Morava river in eastern Serbia, the Carpathian and Balkan Mountains run north to south. The Rila-Rhodope mountain range includes the ancient mountains that run beside the South Morava, the tallest of which is Besna Kobila.
+				
+				<ul>The most significant mountains in Serbia are:
+
+					<li>Kopaonik</li>
+					<li>Stara Planina</li>
+					<li>Mokra Gora</li>
+					<li>Besna Kobila</li>
+					<li>Dukat</li>
+					<li>Golija</li>
+					<li>Suva Planina</li>
+					<li>Gramada</li>
+					<li>Tara</li>
+					<li>Zlatibor</li>
+				<p>The highest peak in Serbia is Midžor with 2169m.</P> 
+				</ul>
+			    
+
+
+			   <p class="indent"></p>
+			   <p class="indent"></p>
+			</div>
+			</td>				
+		</tr>
+		<tr>
+				
+		</tr>
+	   </table>
+	</div>
+	<a href="javascript:void(0);" class="floating-review-link" onclick="openReviewModal()">We'd love to hear your thoughts!<br>RATE US!</a>
+
+	<div id="review-modal" class="modal">
+		<div class="modal-content">
+		  <span class="close" onclick="closeReviewModal()">&times;</span>
+		  <h2>RATE US!</h2>
+
+		  <form id="review-form">
+			<label class="label">Email:</label>
+			<input type="email" id="email" placeholder="Email" required class="box">
+			<br><br>
+			<label class="label">Rate Us:</label>
+			<div class="star-rating">
+				<input type="radio" id="star5" name="rating" value="5" required>
+				<label for="star5">★</label>
+				<input type="radio" id="star4" name="rating" value="4" required>
+				<label for="star4">★</label>
+				<input type="radio" id="star3" name="rating" value="3" required>
+				<label for="star3">★</label>
+				<input type="radio" id="star2" name="rating" value="2" required>
+				<label for="star2">★</label>
+				<input type="radio" id="star1" name="rating" value="1" required>
+				<label for="star1">★</label>
+			</div>
+			<br><br>
+			<label class="label">Enter Your Review:</label>
+			<textarea id="message" placeholder="Message" required></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		 <!-- Success message element -->
+		 <div id="success-message" class="success-message">Thank you for rating us!</div>
+		  
+		</div>
+	  </div>
+  </div>
+</div>
+<div class="end">
+	<aside class="End-left">
+		<!--<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqTfQDnSdzDcfdhbmBShChFFHzlVkGFDKSBChdXJLSBVXdHmqTkFcNxgndpSHmBFsWNbTL">Email me for inquiry.</a>-->
+	  <p>Created by: Pretzil Joy S. Vivares</p>
+	  <p>Course & Year: BSCS-3</p>
+	</aside>
+  
+	<aside class="End-right">
+	  <p>This project is for PC-WDD final project!</p>
+	  <p>Professor: Meridel Ejusa</p>
+	</aside>
+  </div>
+
+    </body>
+</html>

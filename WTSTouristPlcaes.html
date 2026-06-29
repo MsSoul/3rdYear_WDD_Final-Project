@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Serbia: TouristPlaces</title>
+        <link rel="stylesheet" href="WTSstyles.css" />
+		<script>
+function openReviewModal() {
+                var modal = document.getElementById("review-modal");
+                modal.style.display = "block";
+            }
+
+            function closeReviewModal() {
+                var modal = document.getElementById("review-modal");
+                modal.style.display = "none";
+            }
+
+            var selectedRating = 0;
+
+            // Function to highlight the selected star rating.
+            function highlightStars(rating) {
+                const stars = document.querySelectorAll('.star');
+                stars.forEach(function (star) {
+                    const starValue = parseInt(star.getAttribute('data-star'));
+                    if (starValue <= rating) {
+                        star.classList.add('selected');
+                    } else {
+                        star.classList.remove('selected');
+                    }
+                });
+            }
+
+            // Function to handle star rating selection.
+            function selectRating(rating) {
+                selectedRating = rating;
+                highlightStars(rating);
+            }
+
+            // Add event listener to the star-rating element for rating selection.
+            document.getElementById('star-rating').addEventListener('click', function (event) {
+                if (event.target.classList.contains('star')) {
+                    const rating = parseInt(event.target.getAttribute('data-star'));
+                    selectRating(rating);
+                }
+            });
+
+            document.getElementById('review-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Check if email, rating, and message are empty
+                if (!email || selectedRating === 0 || !message) {
+                    alert("Please fill in all fields: Email, Rating, and Message.");
+                } else {
+                    console.log('Email:', email);
+                    console.log('Rating:', selectedRating); // Display the selected star rating
+                    console.log('Message:', message);
+
+                    // Optionally, you can close the modal after submission
+                    closeReviewModal();
+                }
+            });
+			
+			
+					</script>
+			
+    </head>
+    <body>	
+		<div class="head">Welcome to Serbia 
+			<div class="text-overlay">
+				<p>TOURIST PLACES</p>
+			  </div>
+	<img src="WTSimages/tourist2.jpg" class="headimg">
+
+	</div>
+          <nav>
+	    <h3>
+			<table class="center">
+				<tr>
+				  <td ><a style="text-decoration:none" href="WelocmetoSerbia.html" class="hover-underline-animation">Home</a></td>
+				  <td ><a style="text-decoration:none" href="WTSculture.html"  target="_blank" class="hover-underline-animation">Culture</a></td>
+				  <td ><a style="text-decoration:none" href="WTSLifStyle.html" target="_blank" class="hover-underline-animation">Life Style</a></td>
+				  <td ><a style="text-decoration:none" href="WTSFood&Beverage.html" target="_blank" class="hover-underline-animation">Food & Beverage</a></td>
+				  <td ><a style="text-decoration:none" href="WTSTouristPlcaes.html" target="_blank" class="hover-underline-animation">Tourist Paces</a></td>
+				  <td ><a style="text-decoration:none" href="WTSSports.html" target="_blank" class="hover-underline-animation">Sports</a></td>
+				</tr>
+			  </table>
+	    </h3>
+	  </nav>
+	</div>
+	<table border=1>
+		<tr><td>
+			<h2>Top 15 Best Places to Visit in Serbia</h2>
+			<p>From vivacious urban attractions to quiet and peaceful towns and villages that dot the lovely countryside, Serbia has something to offer everyone. Serbia is highly recommended if you are considering traveling to the Balkans because it is also regarded for being one of the more affordable locations.</p><p>Along with a variety of interesting historical and cultural sites, this region is home to some of the world's top music festivals, a hopping nightlife, and swinging cafe and bar scenes. Whatever you do, don't let Serbia's somewhat painful past deter you. This is a location that cannot be missed in the current age.</p>
+		<ol reversed class="reversed">
+			<li><p class="subtitle">Drina River</p></li>
+
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Drina River.jpg" >
+					
+				</aside>
+			</div>	
+					<p>If you want to experience an adrenalin rush in the great outdoors then head to the west of Serbia to explore its wealth of majestic scenery and extreme sports options.</p>
+					<p>The Drina River is one of these, and it's a great place for people who want to try white water rafting. You can sign up with a number of local businesses that will take you out on the water with trained guides who will teach you how to raft safely and talk to you about the varied flora and fauna in the area as you float by.</p><br>
+			
+			<li><p class="subtitle">Sirogojno</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Sirogojno.jpg" >
+					
+				</aside>
+			</div>	
+				
+					<p>The picturesque village of Sirogojno, which is close to Mokra Gora, has an open-air museum or self-described "ethnic village" that comprises historically accurate buildings including a traditional Serbian dairy, an inn, and a bakery. Locals are present to showcase regional traditional arts and crafts.</p>
+					<p>Traditional Serbian cuisine lovingly produced from traditions passed down through generations can be found in Sirogojno, which is reputed to be a great site to experience the local fare and beverages. 'Rakija', a Serbian brandy, is available if you want to sample the local libation.</p><br>
+			
+			<li><p class="subtitle">Drvengrad (literally “a wooden town”) or “Küstendorf” (“Kusturica’s village”)</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Drvengrad.jpg" >
+					
+				</aside>
+			</div>	
+				
+					<p>Don't miss Drvengard, or "Timber Town," another attraction in the Mokra Gora valley if you want to experience something a little different in Serbia.</p>
+					<p>The hamlet has been standing ever since and is now a fully operational ethnic open-air museum. The village was really built as a film set by local director Emir Kusturica for the movie "Life is a Miracle." Drvengrad has a strong commitment to the arts, and throughout the year there are film festivals, music performances, art lessons, and workshops.</p><br>
+			
+			<li><p class="subtitle">Mokra Gora </p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/mokragora.jpg" >
+					
+				</aside>
+			</div>	
+					<p><b><i>Mokra Gora</i></b> Wet Mountain in English</p>
+					<p>The settlement of Mokra Gora, which shares the same name with the lush valley and stunning scenery, is famous for its historic railroad.</p>
+					<p>A must-do activity in this village is to visit the famed railway station and take a train trip through the Mokra Gora valley, taking in all the sights along the route. The village has been restored to approximate its previous status. At the conclusion of the journey, the figure-eight-shaped track neatly circles back to Mokra Gora.</p><br>
+			
+
+			<li><p class="subtitle">Novi Sad</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Novi Sad.jpg" >
+					
+				</aside>
+			</div>	
+				
+					<p>Novi Sad, the capital of the Vojvodina Province and the second-largest city in Serbia, is a must-visit destination for tourists. The city is perhaps best known for its imposing landmark, the Petrovaradin Fortress, a protected building from the 17th century that keeps watch over the city, as well as the EXIT music festival, which is held every year in July and is regarded as one of the most important summer music festivals in all of Europe.</p>
+					<p>There are several picturesque locations in the city, such as the Varadin Bridge that spans the Danube. If you want, you may also take river cruises to view the city from the water. Visit the Stari Grad neighborhood of the city if you enjoy history and culture. Here, you'll find war memorials, museums, art galleries, bars, and cafes that make it the ideal location to explore the streets and take it all in.</p><br>
+			
+			<li><p class="subtitle">Oplenac (St. George's Church in Oplenac)</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Oplenac.jpg" >
+					
+				</aside>
+			</div>	
+				
+					<p>Oplenac, in western Serbia, offers a completely different view of the country, and is an important cultural and historical site due to the St George Church and the Oplenac Mausoleum.</p>
+					<p>The church, also known as Oplenac Church, is an Orthodox church that was constructed in the 1900s and serves as both King Peter I's final resting place and the tomb for 26 members of the Karadordevic royal line. Due in large part to the intricate and magnificent mosaics that adorn the inside, the church and tomb are regarded as some of Serbia's most attractive structures.</p><br>
+
+			<li><p class="subtitle">Leskovac</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Leskovac.jpg" >
+					
+				</aside>
+			</div>	
+					
+						<p>Make sure to come to Leskovac in southern Serbia for the meat if you only do one thing there. The annual Rotiljijada or Barbecue Week, which takes place in September and is a five-day event honoring all things grilled pork, draws throngs of tourists to the city. The main part of the city is blocked off to traffic, food stalls are set up for vendors to display their wares, cooking competitions, music events, and performances are all held to completely embrace the meaty theme.
+						</p><br>
+
+			<li><p class="subtitle">Zlatar Mountain</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/zlatar.jpg" >
+					
+				</aside>
+			</div>	
+				<p>Serbians throng to the Zlatar Mountain Range, which is home to Serbia's highest peak, Golo brdo, to take advantage of everything the area has to offer. The region is dotted with meadows, lakes, and forests, and because of its high elevation and clean air, it has become known as a kind of spa destination for people seeking to unwind and connect with nature distant from the growing metropolis.</p>
+				<p>Winter sports enthusiasts can delight in skiing during the colder months on the numerous slopes that are accessible through a dedicated ski lift that offers breathtaking views of the beautiful valleys below. Along with three man-made lakes where boating, rafting, and fishing are permitted, the area is also home to a number of charming wooden churches and monasteries.</p><br>
+
+			<li><p class="subtitle">Niš</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Niš.jpg" >
+					
+				</aside>
+			</div>	
+				
+					<p>Niš, Serbia's third-largest city and its southernmost location, is renowned for being a university town and the birthplace of the Roman emperor Constantine. The Memorial of Constantine the Great, which is prominently displayed in the city center, is only one of several historical sites that give the city a laid-back and fun-loving atmosphere.</p>
+					<p>Another place of historic note in Niš is the Niš Fotress, built in the 18th century, and it is here that the two sides of the city expertly meet, as the area in front of the fortress is home to rows of cafes that are much loved by the student population looking for some rest and relaxation.</p><br>
+				
+			<li><p class="subtitle">Lepenski Vir</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Lepenski Vir.jpeg" >
+					
+				</aside>
+			</div>					
+					<p>Lepenski Vir is a well-known site on the central Balkan Peninsula that dates from roughly 9,000 to 6,000 BC and has significant artifacts that aspiring archaeologists are sure to like. Along with shrines and river stones allegedly representing ancient gods, the site includes displaced and preserved houses, sculptures, many of which have fish motif, and other artifacts. The website also features figurines of expressionistic-styled prehistoric men and women from 7,000 BC.</p><br>
+
+			<li><p class="subtitle">Kopaonik Mountain</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Kopaonik.jpg" >
+					
+				</aside>
+			</div>	
+					<p>Whatever your skill level or prior experience, head to the Kopaonik mountain range if you enjoy winter sports and chance to be in Serbia between December and April. Prepare to hit the slopes. At the Kopaonik Ski Resort, there are a whopping twenty-four ski lifts that serve the region. There are classifications of slopes for every ability level, as well as skiing and snowboarding options.</p>
+					<p>There is still a lot to do in Kopaonik if you happen to be traveling outside of the ski season because you can go hiking, mountain climbing, and bird viewing. The numerous wooden structures in the area, like as churches and timbre shrines, are also of attractive to hikers and ramblers.</p><br>
+
+			<li><p class="subtitle">Vinca</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/vinca.jpg" >
+					
+				</aside>
+			</div>	
+					<p>Belo brdo, or "White Hill," is an archaeological site in Vinca, an area outside of Belgrade, and it is one of the most significant locations in Serbian history. The region gained notoriety due to the archaeological discoveries made in Vinca, many of which were made of stone or bone and included statues, ornaments, and drinking vessels. Visitors can tour the site as well as the museum that displays these Neolithic artifacts, which are thought to have been made between 5,000 and 4,000 BC.</p>
+					<p>The local docks are well-known for the fish eateries that dot the neighborhood for visitors who wish to try some of the freshly caught fish on offer. Vinca is also well-known as a stopping off point for river cruises along the Danube.
+					</p><br>				
+			<li><p class="subtitle">Sokobanja</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Sokobanja.jpg" >
+					
+				</aside>
+			</div>	
+					<p>Serbia is well known for its spa towns, which were formerly the preferred retreat of Roman emperors. None is more well known than the town of Sokobanja in the country's east.</p>
+					<p>There is a public "hamam" or steam chamber that dates from the 17th century, and locals and celebrities frequent this location for the thermal waters that are supposed to have profoundly restorative effects. Along with the hot springs, Sokobanja attracts tourists for its crisp, clean air, which is supposed to be high in negative ions and free of air pollution due to its higher elevation. As a result, the term "climatic spa" was coined to characterize the therapeutic benefits of breathing in fresh air.</p><br>
+			
+
+
+			<li><p class="subtitle">Fruška Gora Mountain and National Park</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Fruška Gora Mountain and National Park.jpg" >
+					
+				</aside>
+			</div>	
+					<p>The Fruka Gora Mountain, commonly referred to as the "Jewel of Serbia," is a mountain range in the Syrmia region that sits on the border with neighboring Croatia. Fruka Gora Park, a protected area in the alpine region, is home to numerous vineyards and wineries that are well worth a visit for wine connoisseurs.</p>
+					<p>The area is famous for strolling, trekking, climbing, and picnics, but the Orthodox monasteries that are dispersed throughout the countryside—some of which are reported to date back to the 12th century and are now protected—may be the area's biggest lure. Many tourists come to this area because of the breathtaking beauty and the relaxed pace that allows you to explore the area at your own time.</p><br>
+			
+			<li><p class="subtitle">Belgrade</p></li>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/belgrade.PNG" >
+					
+				</aside>
+			</div>	
+					<p>Serbia’s capital Belgrade is located at the intersection between the Danube and the Sava rivers, and is an eclectic, if sometimes arresting, mix of old and new styles, from 19th century buildings to Art Nouveau structures.</p>
+					<p>There is a little bit of everything in Belgrade, including the dominating Kalemegdan Fortress, located in Kalemegdan Park, the remains of which stand today. The park is also home to the Military Museum that even features the remnants of a US Stealth Bomber for those keen to learn about the military history of the region.</p>
+					<p>Other than the citadel, there are numerous Orthodox churches, colorful facades, and charming squares. However, for something more surprising, visit Ada Ciganlija, often known as the "Gypsy Island," in the south of Belgrade, where you'll find yourself in a kind of self-styled beach resort. Along the Sava's banks are beaches where you may go swimming, engage in water sports like water skiing, and enjoy a sizable parkland area where you can observe the local flora and fauna.
+					</p><br>
+			
+
+
+		</ol>
+		</td></tr>
+	</table>
+	<a href="javascript:void(0);" class="floating-review-link" onclick="openReviewModal()">We'd love to hear your thoughts!<br>RATE US!</a>
+
+	<div id="review-modal" class="modal">
+		<div class="modal-content">
+		  <span class="close" onclick="closeReviewModal()">&times;</span>
+		  <h2>RATE US!</h2>
+
+		  <form id="review-form">
+			<label class="label">Email:</label>
+			<input type="email" id="email" placeholder="Email" required class="box">
+			<br><br>
+			<label class="label">Rate Us:</label>
+			<div class="star-rating">
+				<input type="radio" id="star5" name="rating" value="5" required>
+				<label for="star5">★</label>
+				<input type="radio" id="star4" name="rating" value="4" required>
+				<label for="star4">★</label>
+				<input type="radio" id="star3" name="rating" value="3" required>
+				<label for="star3">★</label>
+				<input type="radio" id="star2" name="rating" value="2" required>
+				<label for="star2">★</label>
+				<input type="radio" id="star1" name="rating" value="1" required>
+				<label for="star1">★</label>
+			</div>
+			<br><br>
+			<label class="label">Enter Your Review:</label>
+			<textarea id="message" placeholder="Message" required></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		  
+		  
+		  
+		  
+		</div>
+	  </div>
+  </div>
+  <div class="end">
+	<aside class="End-left">
+	<!--<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqTfQDnSdzDcfdhbmBShChFFHzlVkGFDKSBChdXJLSBVXdHmqTkFcNxgndpSHmBFsWNbTL">Email me for inquiry.</a>-->
+	  <p>Created by: Pretzil Joy S. Vivares</p>
+	  <p>Course & Year: BSCS-3</p>
+
+	</aside>
+  
+	<aside class="End-right">
+		<p>This project is for PC-WDD final project!</p>
+	  <p>Professor: Meridel Ejusa</p>
+	</aside>
+  </div>
+
+    </body>
+</html>

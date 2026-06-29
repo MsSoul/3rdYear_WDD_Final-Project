@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Serbia: Sports</title>
+        <link rel="stylesheet" href="WTSstyles.css" />
+		<script>
+
+function openReviewModal() {
+                var modal = document.getElementById("review-modal");
+                modal.style.display = "block";
+            }
+
+            function closeReviewModal() {
+                var modal = document.getElementById("review-modal");
+                modal.style.display = "none";
+            }
+
+            var selectedRating = 0;
+
+            // Function to highlight the selected star rating.
+            function highlightStars(rating) {
+                const stars = document.querySelectorAll('.star');
+                stars.forEach(function (star) {
+                    const starValue = parseInt(star.getAttribute('data-star'));
+                    if (starValue <= rating) {
+                        star.classList.add('selected');
+                    } else {
+                        star.classList.remove('selected');
+                    }
+                });
+            }
+
+            // Function to handle star rating selection.
+            function selectRating(rating) {
+                selectedRating = rating;
+                highlightStars(rating);
+            }
+
+            // Add event listener to the star-rating element for rating selection.
+            document.getElementById('star-rating').addEventListener('click', function (event) {
+                if (event.target.classList.contains('star')) {
+                    const rating = parseInt(event.target.getAttribute('data-star'));
+                    selectRating(rating);
+                }
+            });
+
+            document.getElementById('review-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Check if email, rating, and message are empty
+                if (!email || selectedRating === 0 || !message) {
+                    alert("Please fill in all fields: Email, Rating, and Message.");
+                } else {
+                    console.log('Email:', email);
+                    console.log('Rating:', selectedRating); // Display the selected star rating
+                    console.log('Message:', message);
+
+                    // Optionally, you can close the modal after submission
+                    closeReviewModal();
+                }
+            });
+			
+					</script>
+    </head>
+    <body>	
+        <div class="head">Welcome to Serbia 
+			<div class="text-overlay">
+				<p>SPORTS</p>
+			  </div>
+			<img src="WTSimages/sports.jpeg" class="headimg">
+			</div>
+          <nav>
+	    <h3>
+			<table class="center">
+				<tr>
+				  <td ><a style="text-decoration:none" href="WelocmetoSerbia.html" class="hover-underline-animation">Home</a></td>
+				  <td ><a style="text-decoration:none" href="WTSculture.html"  target="_blank" class="hover-underline-animation">Culture</a></td>
+				  <td ><a style="text-decoration:none" href="WTSLifStyle.html" target="_blank" class="hover-underline-animation">Life Style</a></td>
+				  <td ><a style="text-decoration:none" href="WTSFood&Beverage.html" target="_blank" class="hover-underline-animation">Food & Beverage</a></td>
+				  <td ><a style="text-decoration:none" href="WTSTouristPlcaes.html" target="_blank" class="hover-underline-animation">Tourist Paces</a></td>
+				  <td ><a style="text-decoration:none" href="WTSSports.html" target="_blank" class="hover-underline-animation">Sports</a></td>
+				</tr>
+			  </table>
+	    </h3>
+	  </nav>
+	</div>
+	<table border=1>
+		<tr><td>
+			<h2>5 Most Popular Sports in Serbia</h2>
+			<p>Sports are a significant component of Serbian culture. Despite the small size of the nation, its athletes have achieved success in a variety of sports. Team sports including football, basketball, volleyball, and other team sports are among the most popular sports. Football is the national sport of Serbia. To encourage the growth and development of these activities, the nation has numerous sports resorts and training facilities for a variety of sports. Sports of all kinds are well-liked in Serbia, but some are more so than others.<br><br>Here is your chance to find out more information about the five sports that are most popular in Serbia.:</p>
+
+				
+				
+			<p class="food">Tennis</p>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/Novak Djokovic.jpg" >
+					<p class="imgtext">Novak Djokovic</p>
+					
+				</aside>
+			</div>	
+				<p>Tennis has overtaken team sports as the most popular sport in Serbia over the past 10 years, despite the country's preference for team sports. According to the ATP (Association of Tennis Professionals) rankings, Novak Djokovic, the current world no. 7 tennis player in singles, is to blame for the sport's increasing popularity. He has long maintained a position in the top 3, reaching the top spot and holding it for a record 373 weeks. 
+				</p><p>
+				The tennis great has 90 ATP singles titles and 21 Grand Slam titles for men's singles. It seems sense that every young Serbian tennis player aspires to one day be like Novak Djokovic. 
+				</p>
+				<p>As FR Yugoslavia's representative, Monica Seles won eight grand slam singles titles and was a former World No. 1 player. Other well-known Serbian tennis players include 2008 French Open champion Ana Ivanovic and Jelena Jankovic. In the WTA rankings, both athletes were ranked first. Nenad Zimonjic and Janko Tipsarevic might also be names you are familiar with. Tennis has become one of the most well-liked sports in Serbia thanks to the efforts of all these players.</p><br><br>
+
+
+			<p class="food">Football</p>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/sports.jpeg" >
+					<p class="imgtext">FIFA U-20 World Cup</p>
+					
+				</aside>
+			</div>	
+				<p>Football is our favorite sport after that. Football is seen by a large majority as being most popular in Serbia. Football is the sport that is the most popular in the nation, despite the fact that the nation may have performed better globally in tennis. The Football Association of Serbia, the largest sporting organization in Serbia, now boasts more than 147,000 registered football players.</p>
+				<p>Since players like Nemanja Matic, Dejan Stankovic, Aleksander Kolarov, and others play for the most prestigious European clubs, Serbia is also known as one of the nations that exports the most footballers worldwide.</p>
+				<p>The national football team, however, does not experience the same levels of success that its players do. Serbia was successful in reaching four of the five FIFA World Cups. In 2013 and 2015, respectively, the national young squad won the U-19 European Cup Championship and the U-20 World Cup.</p>
+				<p>In Serbia, club football is also widely played. The two most well-known clubs in the nation are Red Star Belgrade and FK Partizan Belgrade. In 1991, Red Star won the European and Intercontinental Cup, and in 1966, Partizans reached the final of the European Cup. The Eternal Derby, as the rivalry between the two clubs is known, is one of the most thrilling sports rivalries in the world. The Maracana stadium, home of the Red Star, is the biggest in its vicinity.
+				</p>
+
+
+			<p class="food">Basketball</p>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/basketball.jpg" >
+					<p class="imgtext">Serbia Basketball Team FIBA 2023 (First Place)</p>
+					
+				</aside>
+			</div>	
+				<p>Another very popular sport that Serbia excels at is basketball. Serbia's basketball prowess continues to shine on the international stage, with the men's national team achieving remarkable success in 2023. In the FIBA 2023 Basketball World Championship, Serbia secured the coveted first place, adding to its impressive list of achievements. This recent triumph further cements the country's status as a basketball powerhouse. The team's historic victories in the 1998 and 2002 World Championships, coupled with European Championship wins in 1995, 1997, and 2001, have already solidified Serbia's basketball legacy.</p>
+				<p>The women's national team has also created a name for themselves, winning a bronze medal in 2016 and the European Championship title in 2015 and 2021. Serbia's men's 3x3 squad has also performed admirably in the FIBA 3x3 World Cup and Euro Cup, highlighting the nation's overall superiority in basketball.</p>
+				<p>One of Serbia's most well-known basketball players, Nikola Jokic, has had a huge impact on the NBA in recent months. Jokic, a member of the Denver Nuggets, had a stellar NBA season that saw him win the coveted Most Valuable Player (MVP) award of 2023. His position among the league's best players has been cemented by his extraordinary abilities and versatility on the court. Serbian basketball supporters were extremely proud of Jokic's MVP victory in 2021, which also emphasized the nation's long basketball legacy.</p>
+				<p>Over the past 30 years, many Serbian players have entered the NBA, but only a select few, like Jokic, have truly shone on the world basketball scene, raising the prominence of Serbian basketball on a global scale.</p>
+
+
+			<p class="food">Volleyball</p>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/volleyball.jpg" >
+					<p class="imgtext">2017 CEV Volleyball European Championship - Women</p>
+					
+				</aside>
+			</div>	
+				<p>Volleyball is the next sport on the list. Serb soldiers played the sport for the first time in Serbia sometime in 1918. In 1924, Belgrade hosted the first performance of it. Serbia has also dominated volleyball internationally. The men's team took home the gold at the 2000 Summer Olympics and finished second and third three times at the World and European Championships. In 2005 and 2009, it also dominated the FIVB World League.</p>
+				<p>2016 Olympic women's team silver medalists. Additionally, it won the Euro Championship in 2011, 2017, and 2019 as well as the FIVB World Championship in 2018. The Volleyball Hall of Fame honors players Vladimir Grbic and his brother Nikola Grbic from Serbia. </p>
+
+
+			<p class="food">Water Polo</p>
+			<div class="asidecenter">
+				<aside class="centered-aside">
+					<img src="WTSimages/water polo.jpg" >
+					<p class="imgtext">2018 Men's European Water Polo Championship</p>
+					
+				</aside>
+			</div>	
+				<p>Water polo is the final sport. Rugby and handball are two additional prominent sports in Serbia. Serbia began to play water polo at the start of the 20th century. The men's national team of the nation is second only to Hungary in terms of international success. 
+				</p>
+				<p>At the Olympics in 2016 and 2020, the team took home a gold medal. It has also three times won the World Championship.</p>
+			
+		</td></tr>
+	</table>
+	<a href="javascript:void(0);" class="floating-review-link" onclick="openReviewModal()">We'd love to hear your thoughts!<br>RATE US!</a>
+
+	<div id="review-modal" class="modal">
+		<div class="modal-content">
+		  <span class="close" onclick="closeReviewModal()">&times;</span>
+		  <h2>RATE US!</h2>
+
+		  <form id="review-form">
+			<label class="label">Email:</label>
+			<input type="email" id="email" placeholder="Email" required class="box">
+			<br><br>
+			<label class="label">Rate Us:</label>
+			<div class="star-rating">
+				<input type="radio" id="star5" name="rating" value="5" required>
+				<label for="star5">★</label>
+				<input type="radio" id="star4" name="rating" value="4" required>
+				<label for="star4">★</label>
+				<input type="radio" id="star3" name="rating" value="3" required>
+				<label for="star3">★</label>
+				<input type="radio" id="star2" name="rating" value="2" required>
+				<label for="star2">★</label>
+				<input type="radio" id="star1" name="rating" value="1" required>
+				<label for="star1">★</label>
+			</div>
+			<br><br>
+			<label class="label">Enter Your Review:</label>
+			<textarea id="message" placeholder="Message" required></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		  
+		  
+		  
+		  
+		</div>
+	  </div>
+  </div>
+  <div class="end">
+	<aside class="End-left">
+		<!--<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqTfQDnSdzDcfdhbmBShChFFHzlVkGFDKSBChdXJLSBVXdHmqTkFcNxgndpSHmBFsWNbTL">Email me for inquiry.</a>-->
+	  <p>Created by: Pretzil Joy S. Vivares</p>
+	  <p>Course & Year: BSCS-3</p>
+	</aside>
+  
+	<aside class="End-right">
+	  <p>This project is for PC-WDD final project!</p>
+	  <p>Professor: Meridel Ejusa</p>
+	</aside>
+  </div>
+
+    </body>
+</html>

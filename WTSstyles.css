@@ -1,0 +1,602 @@
+/*prompt review*/
+.label{
+  text-align: left;
+
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+/*STARS*/
+/* Hide the radio buttons */
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+/* Style the labels to look like stars and display them inline in reverse order */
+.star-rating label {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc; /* Default color for unselected stars */
+  transition: color 0.3s;
+  display: inline-block;
+  margin-right: 5px; /* Adjust the spacing between stars */
+}
+
+/* Style the selected star and stars to its right when clicked */
+.star-rating input[type="radio"]:checked + label,
+.star-rating input[type="radio"]:checked + label ~ label {
+  color: gold; /* Change the color of selected stars to gold (or your desired color) */
+}
+
+/* Reverse the order of the stars */
+.star-rating {
+  direction: rtl;
+}
+
+
+/* Style for the floating review link */
+.floating-review-link {
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  padding: 10px 20px;
+  background-color: rgba(245, 245, 245, 0.75);
+  color: rgba(238, 189, 53);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: medium;
+  
+}
+
+.floating-review-link:hover {
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  padding: 10px 20px;
+  background-color: rgba(238, 189, 53);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: medium;
+
+}
+
+/* Style for the review section */
+#review-section {
+  margin-top: 70px;
+}
+/*review area*/
+.container {
+  max-width: 300px;
+  margin-top: 20px;
+  margin-right: 10%;
+  margin-left: 35%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+.box{
+  width: 350px;
+  height: 30px;
+}
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+textarea {
+  height: 100px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #eebd35;
+}
+label{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  font-weight: bold;
+
+}
+h4{
+  text-align: center;
+}
+
+/*start*/
+.head{
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    position: static;
+
+   }
+  .head img{
+    margin-top: 50px;
+    position: static;
+    width: 100%; /* Set a fixed width */
+    height: 320px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+   }
+
+   /*text overlay*/
+   
+.text-overlay {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 250px;
+  width: 300px; /* Set the width */
+  height: 100px; /* Set the height */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 (50%) opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.text-overlay:hover{
+  background-color: rgba(238, 189, 53, 0.5);
+  color: black;
+}
+
+.text-overlay p {
+    color: white; /* Text color */
+    font-size: 20px; /* Adjust the font size */
+    text-align: center; /* Center the text */
+    font-weight: bold;
+}
+body{
+  margin: 50px;
+}
+h2{
+  text-align: center;
+}
+   .center {
+    margin-left: auto;
+    margin-right: auto; 
+   }
+   a{
+    color: #F0A251;
+    font-size: 25px;
+    padding: 10px ;
+   }
+   a:visited{
+    color: #F0A251;
+    font-size: 25px;
+    padding: 10px;
+   }
+   a:active{
+    color: #F0A251;
+    font-size: 25px;
+    padding: 10px;
+   }
+   a:hover{
+    color: black;
+    font-size: 25px;
+    background-color: #FFC68C;
+    padding: 10px ;
+   }
+   p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    text-align: justify;
+     text-justify: inter-word;
+     margin-right:20px;
+     padding:0;
+   }
+   ul{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+     margin-right: 40px;
+    margin-top: 0px;
+   }
+   li{
+   margin-left: 40px;
+   }
+   td.text{
+     top: 50;
+     right: 100px;
+     left: 50px;
+   }
+   p{
+    font-size: large;
+    text-indent: 50px;
+    text-align: justify;
+   }
+   p.about{
+    font-weight: bold;
+    font-size: 25px;
+   }
+   aside{
+    object-fit: none;
+    object-position: top;
+    padding-top: 10px;
+     padding-right: 10px;
+     padding-bottom: 10px;
+     padding-left: 10px;
+     background: whitesmoke;
+   }
+   .flag image{
+    margin-left:50px;
+    margin-bottom:20px;
+    margin-right: 20px;
+   }
+   .flag{
+    border: 1px solid;
+    float:right;
+    margin-top: 0px;
+    margin-left:40px;
+    margin-bottom:20px;
+    margin-right: 20px;
+   }
+   .map{
+    border: 1px solid;
+    float:left;
+    margin-left:20px;
+    margin-bottom:40px;
+    margin-right: 40px;
+   }
+   .topography img{
+    margin-left:50px;
+    margin-right: 20px;
+    margin-top: 20px;
+   }
+   .topography {
+    border: 1px solid;
+    float:right;
+    margin-left:40px;
+    margin-bottom:40px;
+    margin-right: 20px;
+   }
+   td {
+      padding-top: 10px;
+     padding-bottom: 20px;
+     padding-left: 60px;
+     padding-right: 40px;
+   }
+   p.geography{
+    font-weight: bold;
+    font-size: 25px;
+   }
+   #image-title{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+   }
+   /*culture*/
+   table{
+    justify-content: space-between;
+   
+   }
+.subtitle{
+  font-weight: bold;
+  font-size: 25px;
+  text-indent: 0;
+}
+.imgtext{
+  font-size: small;
+  font-weight: bold ;
+  font-style: italic;
+  text-align:center;
+}
+.imgstefan{
+  border: 1px solid;
+  float:right;
+  margin-top: 0px;
+  margin-left:40px;
+  margin-bottom: 40px;
+
+}
+.imgstefan img{
+  width: 200px;
+  height: 300px;
+  margin-top: 20px;
+  margin-left: 25px;
+  padding: 10px
+}
+.Yugoslav{
+  border: 1px solid;
+  float:left;
+  margin-left:0px;
+  margin-bottom:40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  background: whitesmoke;
+}
+.Yugoslav img{
+  width: 200px;
+  height: 300px;
+  margin-left: 0;
+  padding: 20px
+}
+.list{
+  font-size: 20px;
+  text-align: justify;
+}
+.slogan{
+  width: 280px;
+  height: 350px;
+  border: 1px solid;
+  float:left;
+  margin-left:0px;
+  margin-bottom:40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  background: whitesmoke;
+}
+.slogan img{
+  width: 150px;
+  height: 200px;
+  margin-left: 40px;
+  padding: 20px
+}
+.Orthodox{
+  border: 1px solid;
+  float:right;
+  width: 250px;
+  height: 250px;
+  margin-right: 0px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.Orthodox img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+/*food&beverage*/
+.food{
+  font-weight: bold;
+  font-size: 30px;
+  text-indent: 0;
+  border-bottom: 1px solid black; 
+  border-bottom-width: 2px;
+  width: 500px; 
+  display: inline-block; /
+}
+.foodaside img{
+  width: 300px;
+  height: 150px;
+  padding: 20px
+}
+.foodaside{
+  border: 1px solid;
+  float:right;
+  width: 330px;
+  height: 250px;
+  margin-left: 40px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding: 20px
+}
+.PLJESKAVICA{
+  border: 1px solid;
+  float:left;
+  width: 250px;
+  height: 250px;
+  margin-right: 50px;
+  margin-left: 0;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.PLJESKAVICA img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+.BEČKA{
+  border: 1px solid;
+  float:right;
+  width: 250px;
+  height: 250px;
+  margin-right: 0px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.BEČKA img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+.SARMA{
+  border: 1px solid;
+  float:left;
+  width: 250px;
+  height: 250px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.SARMA img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+.UNJENE{
+  border: 1px solid;
+  float:right;
+  width: 250px;
+  height: 250px;
+  margin-right: 0px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.UNJENE img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+.BUREK{
+  border: 1px solid;
+  float:left;
+  width: 250px;
+  height: 250px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.BUREK img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+.AJVAR{
+  border: 1px solid;
+  float:right;
+  width: 250px;
+  height: 250px;
+  margin-right: 0px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.AJVAR img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+.URNEBES{
+  border: 1px solid;
+  float:left;
+  width: 250px;
+  height: 250px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.URNEBES img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+.RAKIJA{
+  border: 1px solid;
+  float:right;
+  width: 250px;
+  height: 250px;
+  margin-right: 0px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.RAKIJA img{
+  width: 200px;
+  height: 150px;
+  padding: 20px
+}
+.PELINKOVAC{
+  border: 1px solid;
+  float:left;
+  width: 250px;
+  height: 300px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.PELINKOVAC img{
+  margin-left: 40px;
+  width: 150px;
+  height: 200px;
+  padding: 20px
+  
+}
+.reversed{
+  font-weight: bold;
+  font-size: large;
+}
+.reversed {
+  font-size: small;
+  font-weight: normal;
+}
+.reversed li{
+  font-size: large;
+  font-weight: bold;
+}
+.asidecenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.centered-aside{
+  width: 600px;
+  height: 400px;
+  margin-bottom: 40px;
+  border: 1px solid;
+}
+.centered-aside img{
+  width: 100%;
+  height: 100%;
+}
+.end {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  background-color: white;
+}
+
+.End-left, .End-right {
+  width: 30%; /* Adjust the width as needed */
+  background-color: white;
+}
+.End-right p{
+  text-align: right;
+  overflow-wrap: break-word;
+}
+.End-left p{
+  word-wrap: break-word;
+}
+.End-right img{
+ 
+  width: 40px;
+  height: 40px;
+}
+/*.End-left a{
+  margin: 40px;
+  font-size: small;
+  margin-bottom: 60px;
+  text-decoration: none;
+  color: gray;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}*/
